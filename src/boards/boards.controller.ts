@@ -74,7 +74,6 @@ export class BoardsController {
     @ApiParam({ name: 'id', description: '게시글 ID' })
     @ApiResponse({ status: 200, description: '게시글 삭제 성공' })
     @ApiResponse({ status: 401, description: '인증 실패: 유효하지 않은 토큰' })
-    @ApiResponse({ status: 403, description: '권한 없음: 자신의 게시글만 삭제 가능' })
     @ApiResponse({ status: 404, description: '게시글을 찾을 수 없음' })
     deleteBoard(
         @Param('id', ParseIntPipe) id: number,
